@@ -19,7 +19,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Jersey Web Application</servlet-name>
-        <url-pattern>/carRegistry/*</url-pattern>
+        <url-pattern>/car-parts-tracking/*</url-pattern>
     </servlet-mapping>
 
 </web-app>
