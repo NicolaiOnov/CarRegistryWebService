@@ -2,13 +2,13 @@ package org.sdj3;
 
 import org.sdj3.model.Car;
 import org.sdj3.model.CarPart;
+import org.sdj3.model.PartType;
 import org.sdj3.remote.ServerCommunication;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
-import java.util.Collection;
 
 /**
  * Created by marom on 27/09/16.
@@ -37,16 +37,16 @@ public class CarRegistryService {
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response trackCarParts(@PathParam("id") int chassisNo) throws IOException{
-        Collection<CarPart> partsList = org.sdj3.util.ModelConverter.convert(
-                ServerCommunication.getCarParts(chassisNo)
-        );
+//        Collection<CarPart> partsList = org.sdj3.util.ModelConverter.convert(
+//                ServerCommunication.getCarParts(chassisNo)
+//        );
 
-//        return Response.status(200).entity(new CarPart[]{
-//                new CarPart(25, 30, "dsf", PartType.Door),
-//                new CarPart(25, 30, "aaa", PartType.Engine)
-//                }).build();
+        return Response.status(200).entity(new CarPart[]{
+                new CarPart(25, 30, "dsf", PartType.Door),
+                new CarPart(25, 30, "aaa", PartType.Engine)
+                }).build();
 
-        return Response.status(200).entity(partsList).build();
+        //return Response.status(200).entity(partsList).build();
     }
 
 
