@@ -1,4 +1,4 @@
-package org.sdj3.model;
+package shared;
 
 public enum PartType {
     Wheel,

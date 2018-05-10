@@ -1,6 +1,4 @@
-package org.sdj3.remote;
-
-import org.sdj3.model.PartType;
+package shared;
 
 import java.io.Serializable;
 
@@ -12,6 +10,8 @@ public class CarPartDTO implements Serializable
     private int chassisNo;
     private String model;
     private PartType type;
+    private int palletNo;
+    private int packageNo;
 
     public CarPartDTO(double weight, int chassisNo, String model, PartType type)
     {
@@ -30,6 +30,16 @@ public class CarPartDTO implements Serializable
         this.type = type;
     }
 
+    public CarPartDTO(int id, double weight, int chassisNo, String model, PartType type, int palletNo, int packageNo)
+    {
+        this.id = id;
+        this.weight = weight;
+        this.chassisNo = chassisNo;
+        this.model = model;
+        this.type = type;
+        this.palletNo = palletNo;
+        this.packageNo = packageNo;
+    }
     public int getId()
     {
         return id;
@@ -53,6 +63,22 @@ public class CarPartDTO implements Serializable
     public PartType getType()
     {
         return type;
+    }
+
+    public int getPalletNo() {
+        return palletNo;
+    }
+
+    public void setPalletNo(int palletNo) {
+        this.palletNo = palletNo;
+    }
+
+    public int getPackageNo() {
+        return packageNo;
+    }
+
+    public void setPackageNo(int packageNo) {
+        this.packageNo = packageNo;
     }
 
     public String toString()

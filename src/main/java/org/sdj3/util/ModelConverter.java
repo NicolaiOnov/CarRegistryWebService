@@ -1,7 +1,7 @@
 package org.sdj3.util;
 
 import org.sdj3.model.CarPart;
-import org.sdj3.remote.CarPartDTO;
+import shared.CarPartDTO;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -13,8 +13,11 @@ public class ModelConverter {
                 carPartDTO.getWeight(),
                 carPartDTO.getChassisNo(),
                 carPartDTO.getModel(),
-                carPartDTO.getType()
+                carPartDTO.getType(),
+                carPartDTO.getPalletNo(),
+                carPartDTO.getPackageNo()
                 );
+
     }
 
     public static Collection<CarPart> convert(Collection<CarPartDTO> carPartDTOCollection){
