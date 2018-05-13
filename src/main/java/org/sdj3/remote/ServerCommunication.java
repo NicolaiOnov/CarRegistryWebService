@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class ServerCommunication {
-    private static CarPartDAO server;
+    private final static CarPartDAO server;
     private static final int PORT = 5000;
     private static final String STUB_NAME = "dbServer";
 
